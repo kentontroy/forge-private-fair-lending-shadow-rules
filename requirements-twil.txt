@@ -1,0 +1,4 @@
+# Optional: run TwIL-LM locally for --twil (adds a ~1 GB model download on first run)
+-r requirements.txt
+llama-cpp-python>=0.3.2
+huggingface_hub>=0.24

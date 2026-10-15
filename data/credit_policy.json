@@ -1,0 +1,35 @@
+{
+  "name": "Consumer Installment Credit Policy (synthetic)",
+  "version": "2026.1",
+  "decision": "An application that satisfies every clause below shall be approved; any other application shall be declined.",
+  "clauses": [
+    {
+      "id": "CP-1",
+      "title": "Credit score",
+      "text": "The applicant must have a FICO score of at least 660.",
+      "reason_code": "CREDIT_SCORE",
+      "analyst_formula": "fico >= 660"
+    },
+    {
+      "id": "CP-2",
+      "title": "Debt-to-income",
+      "text": "The applicant's total debt-to-income ratio must not exceed 45%.",
+      "reason_code": "DTI",
+      "analyst_formula": "dti <= 45"
+    },
+    {
+      "id": "CP-3",
+      "title": "Loan-to-value",
+      "text": "The loan-to-value ratio must not exceed 95%.",
+      "reason_code": "LTV",
+      "analyst_formula": "ltv <= 95"
+    }
+  ],
+  "reason_codes": {
+    "CREDIT_SCORE": "Credit score below program minimum",
+    "DTI": "Debt-to-income ratio too high",
+    "LTV": "Loan-to-value ratio too high",
+    "INCOME_VERIFICATION": "Unable to verify income",
+    "RESIDENCE_STABILITY": "Length of residence"
+  }
+}
